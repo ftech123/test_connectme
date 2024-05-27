@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Login</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <!-- Tailwind CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style>
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+        .fade-in {
+            animation: fadeIn 1s ease-in-out;
+        }
+    </style>
+</head>
+<body class="bg-purple-900 bg-cover bg-center bg-no-repeat" style="background-image: url('https://img.jagranjosh.com/images/2024/March/2232024/Campus%20entrance%20view%20of%20Angadi%20Institute%20Of%20Technology%20And%20Management%20Belgavi_Campus-view.jpg'); min-height: 100vh;">
+
+    <!-- Navigation Bar -->
+    <nav class="bg-purple-800 py-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="#" class="text-white font-bold text-lg">ConnectMe App</a>
+        </div>
+    </nav>
+
+    <div class="flex justify-center items-center h-full">
+        <div class="container mx-auto max-w-md bg-white bg-opacity-80 p-8 rounded-lg shadow-lg fade-in" style="margin-top: 15%;">
+            <h2 class="text-2xl font-bold mb-4 text-center" >AITM</h2>
+            <div id="messageContainer" class="text-center mb-4"></div>
+            <a href="login.html" class="block text-center bg-purple-600 hover:bg-purple-700 text-white py-2 px-4 rounded-md focus:outline-none focus:ring focus:ring-purple-500 focus:ring-opacity-50 mb-2">Login</a>
+            <a href="register.html" class="block text-center bg-purple-600 hover:bg-purple-700 text-white py-2 px-4 rounded-md focus:outline-none focus:ring focus:ring-purple-500 focus:ring-opacity-50">Register</a>
+        </div>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>

@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Tag and Dropdown with Tailwind CSS</title>
+    <!-- Tailwind CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+     <style>
+            .outerDiv {
+                background-color: #006699;
+                color: #fff;
+                height: 400px;
+                width: 600px;
+                margin: 0px auto;
+                padding: 5px;
+            }
+            .leftDiv {
+                background-color: #efefef;
+                color: #000;
+                height: 400px;
+                width: 48%;
+                float: left;
+            }
+            .rightDiv {
+                background-color: #efefef;
+                color: #000;
+                height: 400px;
+                width: 48%;
+                float: right;
+            }
+        </style>
+</head>
+
+<body class="bg-gradient-to-br from-purple-500 to-pink-500 min-h-screen flex flex-col ">
+
+    <div class="container mx-auto mt-10">
+        <nav class="flex justify-center">
+            <a href="class_main.html" class="text-black-500 font-bold text-lg mx-4 hover:text-blue-700">Home</a>
+            <a href="qa.html" class="text-black-500 font-bold text-lg mx-4 hover:text-blue-700">Q&A Forum</a>
+            <a href="navigation.html" class="text-black-500 font-bold text-lg mx-4 hover:text-blue-700">Campus Map</a>
+            <a href="chat.html" class="text-black-500 font-bold text-lg mx-4 hover:text-blue-700">Chatbot</a>
+        </nav>
+    </div>
+    <!-- Container for centered content -->
+    <div class="flex flex-col items-center justify-center">
+        <!-- Image Tag -->
+        <div class="my-5" style="border: solid black 1px;padding: 5px;">
+            <img id="locationImage" src="main.jpg" alt="Location Image" class="rounded-lg shadow-md" width="250px" height="250px">
+            <br>
+            <h6 style="text-align: center;color: rgb(255, 255, 255);"><b>Main Gate ↑</b></h6>
+        </div>
+        <div>
+            <!-- <p>↑ ↓ → ← ➹ ➧ ➲ ➾ ➫ ➙</p> -->
+
+            <h4>College Graph</h4>
+            <br>
+            <hr>
+            <br>
+            <ul>
+                <li>Block1 : Administrative Block</li>
+                <li>Block2 : EEE (4th Floor)/AI (2nd Floor)</li>
+                <li>Block3 : CS (4th Floor)/Polytechnic (3rd Floor)/Math Department (2nd Floor)</li>
+                <li>Block4 : MBA (4th Floor)/MCA (3rd Floor)/Civil Department (1st Floor-left)/Xerox (1st Floor-Right)</li>
+                <li>Block5 : Canteen/Ground</li>
+                <li style="color: brown;"><b>Stairs</b></li>
+            </ul>
+            <br>
+            <h3 id="discription" style="border: solid 1px black;text-align: center;">Click Below</h3>
+        </div>
+<hr>
+        <!-- Dropdown with Multiple Links -->
+        <div class="my-5">
+            <!-- <h2 class="text-xl font-semibold mb-2">Select Location:</h2> -->
+            <div class="relative inline-block text-left">
+                <div>
+                    <button type="button" onclick="changeImage('Admission block &bank.jpg'),changeText(' ↑ - Main Gate \n ← - Block 1 \n ')" class="inline-flex justify-center w-full rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-gray-100">
+                        Admission Block & Bank
+                    </button>
+
+                    <button type="button" onclick="changeImage('Admission cell & Auditorium - Copy.jpg'),changeText(' ↑ - Main Gate \n ← - Block 1 \n ')" class="inline-flex justify-center w-full rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-gray-100">
+                        Admission cell & Auditorium 
+                    </button>
+
+                    <button type="button" onclick="changeImage('AI&DS dept - Copy.jpg'),changeText(' ↑ - Main Gate \n ← - Block 2 [2nd Floor] \n ')" class="inline-flex justify-center w-full rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-gray-100">
+                        AI&DS dept
+                    </button>
+
+                    <button type="button" onclick="changeImage('cafe - Copy.jpg'),changeText(' ↑ - Main Gate \n → - Ground \n ↑ - Cafe to the left ')" class="inline-flex justify-center w-full rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-gray-100">
+                        Cafe
+                    </button>
+
+                    <button type="button" onclick="changeImage('canteen - Copy.jpg'),changeText(' ↑ - Main Gate \n → - Ground \n ↑ - Canteen to the Right ')" class="inline-flex justify-center w-full rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-gray-100">
+                        Canteen
+                    </button>
+
+                    <button type="button" onclick="changeImage('Civil Dept - Copy.jpg'),changeText(' ↑ - Main Gate \n → - Block 4 [1st Floor] \n ')" class="inline-flex justify-center w-full rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-gray-100">
+                        Civil Department
+                    </button>
+
+                    <button type="button" onclick="changeImage('csd - Copy.jpg'),changeText(' ↑ - Main Gate \n ↑ - Block 3 [3rd Floor] \n ')" class="inline-flex justify-center w-full rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-gray-100">
+                        CS Department 
+                    </button>
+
+                    <button type="button" onclick="changeImage('EC Dept - Copy.jpg'),changeText(' ↑ - Main Gate \n → - Block 4 [3rd Floor] \n ')" class="inline-flex justify-center w-full rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-gray-100">
+                        EC
+                    </button>
+                    
+                    <button type="button" onclick="changeImage('EEE dept & 1st yr classes - Copy.jpg'),changeText(' ↑ - Main Gate \n → - Block 1 [4th Floor] \n ')" class="inline-flex justify-center w-full rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-gray-100">
+                        EEE
+                    </button>
+
+                    <button type="button" onclick="changeImage('ground - Copy.jpg'),changeText(' ↑ - Main Gate \n → - Ground \n ')" class="inline-flex justify-center w-full rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-gray-100">
+                        Ground
+                    </button>
+                    <button type="button" onclick="changeImage('Library - Copy.jpg'),changeText(' ↑ - Main Gate \n ← - Block 1 [1st Floor] \n ')" class="inline-flex justify-center w-full rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-gray-100">
+                        Library
+                    </button>
+                    <button type="button" onclick="changeImage('math.jpeg'),changeText(' ↑ - Main Gate \n ↑ - Block 2 [2nd Floor] \n ')" class="inline-flex justify-center w-full rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-gray-100">
+                        Math department 
+                    </button>
+                    <button type="button" onclick="changeImage('MBA dept.jpg'),changeText(' ↑ - Main Gate \n → - Block 4 [4rd Floor] \n ')" class="inline-flex justify-center w-full rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-gray-100">
+                        MBA department 
+                    </button>
+                    <button type="button" onclick="changeImage('MCA Dept.jpg'),changeText(' ↑ - Main Gate \n → - Block 4 [3rd Floor] \n ')" class="inline-flex justify-center w-full rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-gray-100">
+                        MCA department 
+                    </button>
+                    <button type="button" onclick="changeImage('Mech dept - Copy.jpg'),changeText(' ↑ - Main Gate \n ↑ - Block 3 [2nd Floor] \n ')" class="inline-flex justify-center w-full rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-gray-100">
+                        Mechanical department 
+                    </button>
+                    <button type="button" onclick="changeImage('Polytechnic.jpg'),changeText(' ↑ - Main Gate \n ↑ - Block 3 [3rd Floor] \n ')" class="inline-flex justify-center w-full rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-gray-100">
+                        Polytechnic
+                    </button>
+                    <button type="button" onclick="changeImage('Xerox shop.jpg'),changeText(' ↑ - Main Gate \n → - Block 4 [Ground Floor] \n ')" class="inline-flex justify-center w-full rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-gray-100">
+                        Xerox
+                    </button>
+                </div>
+
+                <!-- Dropdown menu, show/hide based on menu state. -->
+                <div class="origin-top-right absolute right-0 mt-2 w-40 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 divide-y divide-gray-100 hidden">
+                    <div class="py-1">
+                        <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Link 1</a>
+                        <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Link 2</a>
+                        <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Link 3</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Function to set default image once the page loads
+        window.onload = function() {
+            // Set the default image here
+            var defaultImageSrc = 'main.jpg'; 
+            var discription = "College Graph"
+            changeImage(defaultImageSrc);
+        };
+    
+        function changeImage(imageSrc) {
+            document.getElementById('locationImage').src = imageSrc;
+        }
+
+        function changeText(TextSrc) {
+        // Split the text by newline character (\n)
+        var lines = TextSrc.split("\n");
+        // Join the lines with HTML line breaks
+        var formattedText = lines.join("<br>");
+        // Set the formatted text as the content of the h3 element
+        document.getElementById('discription').innerHTML = formattedText;
+    }
+
+        
+    </script>
+    
+
+</body>
+
+</html>
